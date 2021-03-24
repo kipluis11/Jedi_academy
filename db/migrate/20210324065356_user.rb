@@ -1,11 +1,12 @@
 class User < ActiveRecord::Migration[6.1]
   def change
-    create_table :users do |k|
-      k.string :username
-      k.string :password_digest
-      k.integer :master_id
-      k.integer :user_id
+    create_table :users do |t|
+      t.string :username
+      t.string :password_digest
+      t.belongs_to :master, foreign_key: true
+      t.integer :user_id
 
-      k.timestamps
+      t.timestamps
+    end
   end
 end
