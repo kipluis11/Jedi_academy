@@ -11,6 +11,6 @@ class PagesController < ApplicationController
   def power_training
   end
 
-  def fighting_styles
+  def powers
   end
 end
